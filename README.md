@@ -58,18 +58,20 @@ This project provides two complementary recording modes:
 Both versions produce **identical CSV output** (`timestamp_ms, channel, gpio, adc, packet`), so offline analysis is completely interchangeable.
 
 ---
-
 ## Electrode Placement
 
 ### Subject Setup
-- **Reference:** Fpz (midline, forehead)
+- **Common Reference (REF):** Right mastoid
+- **Shared IN-:** Left mastoid (shared by both Channel 0 and Channel 1)
 - **Channel 0 (O1):** Left occipital (visual cortex, back of the head)
+  - Connection: IN+
   - GPIO: 32 (v2) / configurable (v1)
   - Anatomical region: Primary visual processing
 - **Channel 1 (FP1):** Left prefrontal (forehead, above left eyebrow)
+  - Connection: IN+
   - GPIO: 33 (v2) / configurable (v1)
   - Anatomical region: Executive function, attention, emotion regulation
-
+    
 ### Amplification
 - **Amplifier:** Upside Down Labs BioAmp EXG Pill (×2.4 MVpp, ×1 MV gain)
 - **Bandpass (firmware):** 0.5–45 Hz (hardware + software filtering)
